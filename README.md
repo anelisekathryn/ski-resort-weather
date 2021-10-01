@@ -11,6 +11,8 @@ https://api.weatherbit.io/v2.0/current
 
 ## Wireframe
 Mockup of site here.
+-
+-
 
 ## MVP Features List
 - find and incorporate a weather API that can pinpoint ski resorts by latitude/longitude
