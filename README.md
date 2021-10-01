@@ -25,6 +25,7 @@ Desktop wireframe: to be created
 ## Post MVP Features List
 - choose additional weather parameters from a dropdown to add to your report
 - add additional ski resorts throughout the mountain west (not just Utah)
+- add animated snowflake while user waits for weather to load
 
 ## Project Goals
 | Date           | Deliverable      | Status      |
