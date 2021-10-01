@@ -18,7 +18,7 @@ Desktop wireframe: to be created
 
 ## MVP Features List
 - find and incorporate a weather API that can pinpoint ski resorts by latitude/longitude
-- drop down menu to choose from list of available resorts (include at least 10 resorts)
+- drop down menu to choose from list of available resorts (include at least 5 resorts)
 - resort "module" with weather data, resort info, and external button links shown on page when a resort is chosen
 - build layout using HTML and Javascript
 - style page using flexbox and CSS
@@ -26,7 +26,7 @@ Desktop wireframe: to be created
 
 ## Post MVP Features List
 - choose additional weather parameters from a dropdown to add to your report
-- add additional ski resorts throughout the mountain west (not just Utah)
+- add additional ski resorts throughout the mountain west (10+)
 - add animated snowflake while user waits for weather to load
 
 ## Project Goals
