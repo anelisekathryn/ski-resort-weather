@@ -10,9 +10,7 @@ https://api.weatherbit.io/v2.0/current
 ![Screen Shot 2021-10-01 at 9 59 16 AM](https://user-images.githubusercontent.com/90531123/135651776-14046588-33c8-4db8-b249-2399b82dc5ef.png)
 
 ## Wireframe
-Mockup of site here.
--
--
+insert here
 
 ## MVP Features List
 - find and incorporate a weather API that can pinpoint ski resorts by latitude/longitude
@@ -26,11 +24,26 @@ Mockup of site here.
 - choose additional weather parameters from a dropdown to add to your report
 - add additional ski resorts throughout the mountain west (not just Utah)
 
-## Project Schedule
-schedule
+## Project Goals
+| Date           | Deliverable      | Status      |
+| :------------- |:-----------------| :----------:|
+| October 1     | Project Description / Finish Schedule & Timeframe / Complete Wireframe / Connect API | Partial      |
+| October 2–3     | Research Info / Write Pseudocode / HTML Structure | Incomplete      |
+| October 4    | tbd | Incomplete      |
+| October 5    | tbd | Incomplete      |
+| October 6    | tbd | Incomplete      |
+| October 7    | tbd | Incomplete      |
+| October 8    | Final Presentation | Incomplete      |
 
-## Goals:
-list
+## Project Timeframe:
+| Component               | Priority  | Estimated Time  | Actual Time  |
+| :---------------------- |:---------:|:---------------:|:------------:|
+| Description             | H/L       | x hrs           | x hrs        |
+| Description             | H/L       | x hrs           | x hrs        |
+| Description             | H/L       | x hrs           | x hrs        |
+| Description             | H/L       | x hrs           | x hrs        |
+| Description             | H/L       | x hrs           | x hrs        |
+| Description             | H/L       | x hrs           | x hrs        |
+| Description             | H/L       | x hrs           | x hrs        |
+| Description             | H/L       | x hrs           | x hrs        |
 
-## Timeframe:
-table?
