@@ -17,7 +17,10 @@ Mockup of site here.
 ## MVP Features List
 - find and incorporate a weather API that can pinpoint ski resorts by latitude/longitude
 - drop down menu to choose from list of available resorts (include at least 10 resorts)
-- resort "module" with weather 
+- resort "module" with weather data, resort info, and external button links shown on page when a resort is chosen
+- build layout using HTML and Javascript
+- style page using flexbox and CSS
+- add a breakpoint/media query to implement responsive design for mobile and desktop
 
 ## Post MVP Features List
 - choose additional weather parameters from a dropdown to add to your report
