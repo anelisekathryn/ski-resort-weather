@@ -7,6 +7,8 @@ This interactive website will display the current weather at a ski resort from a
 ## API & Snippet Example
 https://api.weatherbit.io/v2.0/current
 
+Documentation: https://www.weatherbit.io/api/weather-current
+
 ![Screen Shot 2021-10-01 at 9 59 16 AM](https://user-images.githubusercontent.com/90531123/135651776-14046588-33c8-4db8-b249-2399b82dc5ef.png)
 
 ## Wireframe
