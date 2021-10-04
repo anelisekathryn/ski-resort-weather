@@ -20,8 +20,8 @@ var resortData = {
     name: 'Brighton',
     latitude: '40.598',
     longitude: '-111.5832',
-    location: '500"',
-    averageSnow: 'Big Cottonwood Canyon, Utah',
+    location: 'Big Cottonwood Canyon, Utah',
+    averageSnow: '500"',
     verticalDrop: '1,875 ft',
     skiAcres: '1,050',
     skiRuns: '66',
@@ -117,6 +117,8 @@ weatherButton.addEventListener('click', (ev) => {
   const key = 'a3789ed65dfe478abd8384a8626c7b05';
   const resortAPIUrl = `${domain}?key=${key}&&lat=${latitude}&lon=${longitude}`;
 
+  showResortTitle(resortInput)
+
   fetch(resortAPIUrl)
    .then((res) => { return res.json() })
    .then((resJSON) => {
@@ -128,6 +130,19 @@ weatherButton.addEventListener('click', (ev) => {
   })
   showResortFacts(resortInput)
 })
+
+const showResortTitle = (resortTitle) => {
+  const resortTitleDiv = document.querySelector('#title');
+
+  const divTitle = document.createElement('h3');
+  const locationTag = document.createElement('h5');
+
+  divTitle.innerText = resortData[resortTitle].name;
+  locationTag.innerText = resortData[resortTitle].location;
+    
+  resortTitleDiv.append(divTitle, locationTag);
+
+}
 
 const showResortWeather = (resortWeather) => {
   // console.log(resortWeather)
@@ -153,7 +168,7 @@ const showResortWeather = (resortWeather) => {
 }
 
 const showResortFacts = (resortFacts) => {
-  console.log(resortFacts)
+  // console.log(resortFacts)
 
   const resortInput = document.querySelector('#ski-resorts').value
   const resortFactsDiv = document.querySelector('#resort-facts');
@@ -171,7 +186,6 @@ const showResortFacts = (resortFacts) => {
   skiRunsTag.innerText = resortData[resortFacts].skiRuns;
   vertDropTag.innerText = resortData[resortFacts].verticalDrop;
   summitElevTag.innerText = resortData[resortFacts].summitElev;
-  // summitElevTag.innerText = resortFacts.resortData[resortInput].summitElev;
 
   resortFactsDiv.append(divTitle, averageSnowTag, skiableAcresTag, skiRunsTag, vertDropTag, summitElevTag);
 
