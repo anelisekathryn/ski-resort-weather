@@ -98,7 +98,6 @@ var resortData = {
   }
 }
 
-
 const weatherButton = document.querySelector('#get-weather');
 weatherButton.addEventListener('click', (ev) => {
   ev.preventDefault();
@@ -108,7 +107,7 @@ weatherButton.addEventListener('click', (ev) => {
   console.log(resortInput)
 
   // test console log for resort data for choosing value in dropdown
-  console.log(resortData[resortInput])
+  // console.log(resortData[resortInput])
 
   latitude = resortData[resortInput].latitude
   longitude = resortData[resortInput].longitude
@@ -119,14 +118,36 @@ weatherButton.addEventListener('click', (ev) => {
 
   fetch(resortAPIUrl)
    .then((res) => { return res.json() })
-   .then((resJson) => {
-     console.log(resJson);
+   .then((resJSON) => {
+     console.log(resJSON);
       // store the json in a variable:
-     //  showResortWeather(resJson.Search);
-     console.log('request submitted')
+      showResortData(resJSON);
+      console.log('request submitted')
   })
   .catch((error) => {
     console.log(`ERROR: ${error}`);
   })
 
 })
+
+const showResortData = (resortData) => {
+  // console.log(resortData)
+
+  const currentWeatherDiv = document.querySelector('#current-weather');
+
+  const tempTag = document.createElement('p');
+  const weatherTag = document.createElement('p');
+  const snowTag = document.createElement('p');
+  const windDirTag = document.createElement('p');
+  const windSpeedTag = document.createElement('p');
+
+  tempTag.innerText = resortData.data[0].app_temp;
+  weatherTag.innerText = resortData.data[0].weather.description;
+  snowTag.innerText = resortData.data[0].snow;
+  windDirTag.innerText = resortData.data[0].wind_cdir_full;
+  windSpeedTag.innerText = resortData.data[0].wind_spd;
+
+
+  currentWeatherDiv.append(tempTag, weatherTag, snowTag, windDirTag, windSpeedTag);
+
+}
