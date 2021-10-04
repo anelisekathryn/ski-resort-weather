@@ -99,6 +99,7 @@ var resortData = {
 }
 
 const weatherButton = document.querySelector('#get-weather');
+
 weatherButton.addEventListener('click', (ev) => {
   ev.preventDefault();
 
@@ -120,34 +121,58 @@ weatherButton.addEventListener('click', (ev) => {
    .then((res) => { return res.json() })
    .then((resJSON) => {
      console.log(resJSON);
-      // store the json in a variable:
-      showResortData(resJSON);
-      console.log('request submitted')
+      showResortWeather(resJSON);
   })
   .catch((error) => {
     console.log(`ERROR: ${error}`);
   })
-
+  showResortFacts(resortInput)
 })
 
-const showResortData = (resortData) => {
-  // console.log(resortData)
+const showResortWeather = (resortWeather) => {
+  // console.log(resortWeather)
 
   const currentWeatherDiv = document.querySelector('#current-weather');
 
+  const divTitle = document.createElement('h4')
   const tempTag = document.createElement('p');
   const weatherTag = document.createElement('p');
   const snowTag = document.createElement('p');
   const windDirTag = document.createElement('p');
   const windSpeedTag = document.createElement('p');
 
-  tempTag.innerText = resortData.data[0].app_temp;
-  weatherTag.innerText = resortData.data[0].weather.description;
-  snowTag.innerText = resortData.data[0].snow;
-  windDirTag.innerText = resortData.data[0].wind_cdir_full;
-  windSpeedTag.innerText = resortData.data[0].wind_spd;
+  divTitle.innerText = 'Current Weather'
+  tempTag.innerText = resortWeather.data[0].app_temp;
+  weatherTag.innerText = resortWeather.data[0].weather.description;
+  snowTag.innerText = resortWeather.data[0].snow;
+  windDirTag.innerText = resortWeather.data[0].wind_cdir_full;
+  windSpeedTag.innerText = resortWeather.data[0].wind_spd;
 
+  currentWeatherDiv.append(divTitle, tempTag, weatherTag, snowTag, windDirTag, windSpeedTag);
 
-  currentWeatherDiv.append(tempTag, weatherTag, snowTag, windDirTag, windSpeedTag);
+}
+
+const showResortFacts = (resortFacts) => {
+  console.log(resortFacts)
+
+  const resortInput = document.querySelector('#ski-resorts').value
+  const resortFactsDiv = document.querySelector('#resort-facts');
+
+  const divTitle = document.createElement('h4')
+  const averageSnowTag = document.createElement('p');
+  const skiableAcresTag = document.createElement('p');
+  const skiRunsTag = document.createElement('p');
+  const vertDropTag = document.createElement('p');
+  const summitElevTag = document.createElement('p');
+
+  divTitle.innerText = 'Resort Facts'
+  averageSnowTag.innerText = resortData[resortFacts].averageSnow;
+  skiableAcresTag.innerText = resortData[resortFacts].skiAcres;
+  skiRunsTag.innerText = resortData[resortFacts].skiRuns;
+  vertDropTag.innerText = resortData[resortFacts].verticalDrop;
+  summitElevTag.innerText = resortData[resortFacts].summitElev;
+  // summitElevTag.innerText = resortFacts.resortData[resortInput].summitElev;
+
+  resortFactsDiv.append(divTitle, averageSnowTag, skiableAcresTag, skiRunsTag, vertDropTag, summitElevTag);
 
 }
