@@ -1,10 +1,4 @@
 
-// TEST LINES for fetch code:
-// latitude = '40.678'
-// longitude = '-111.521'
-
-// const resortInput = document.getElementById('blank').value
-
 
 const alta = {
   name: 'Alta',
@@ -103,13 +97,20 @@ const solitude = {
   snowReport: 'https://www.solitudemountain.com/mountain-and-village/conditions-and-maps#/',
 }
 
-console.log(parkCity)
+const weatherButton = document.querySelector('#get-weather');
+weatherButton.addEventListener('click', (ev) => {
+  ev.preventDefault();
 
-const domain = 'https://api.weatherbit.io/v2.0/current';
-const key = 'a3789ed65dfe478abd8384a8626c7b05';
-const resortAPIUrl = `${domain}?key=${key}&&lat=${latitude}&lon=${longitude}`;
+  const resortInput = document.querySelector('#ski-resorts')
 
-fetch(resortAPIUrl)
+  latitude = '40.678'
+  longitude = '-111.521'
+
+  const domain = 'https://api.weatherbit.io/v2.0/current';
+  const key = 'a3789ed65dfe478abd8384a8626c7b05';
+  const resortAPIUrl = `${domain}?key=${key}&&lat=${latitude}&lon=${longitude}`;
+
+  fetch(resortAPIUrl)
    .then((res) => { return res.json() })
    .then((resJson) => {
      console.log(resJson);
@@ -121,3 +122,4 @@ fetch(resortAPIUrl)
     console.log(`ERROR: ${error}`);
   })
 
+})

@@ -11,22 +11,24 @@
 <body>
 <!-- ============================= -->
   <header>
-    <h4>Ski Resort Weather</h4>  
+    <h1>Ski Resort Weather</h1>  
   </header>
 <!-- ============================= -->
   <main>
-    <h3>Find a resort</h3>
+    <h4>Choose a ski resort from the drop down menu below to see current weather, resort facts, and more!</h4>
+    <h5>Find a resort:</h5>
     <!-- referenced for label code: https://blog.hubspot.com/website/html-dropdown -->
     <!-- ALSO: reference dog lab / solution from Phil?? -->
-    <label for="ski-resorts">Choose a resort</label>
     <select name="ski-resorts" id="ski-resorts">
+      <option disabled selected>   </option>
       <option value="alta">Alta</option>
       <option value="brighton">Brighton</option>
       <option value="deer-valley">Deer Valley</option>
       <option value="park-city">Park City Mountain</option>
       <option value="snowbird">Snowbird</option>
       <option value="solitude">Solitude</option>
-    </select>  
+    </select>
+    <input id="get-weather" type="Submit" value="Get Weather">
   </main>
 <!-- ============================= -->
   <footer>
