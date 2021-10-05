@@ -241,7 +241,7 @@ const showResortFacts = (resortFacts) => {
 
 const showResortButtons = (resortButtons) => {
 
-  const resortButtonsDiv = document.querySelector('#buttons');
+  const resortButtonsDiv = document.querySelector('#links');
   resortButtonsDiv.innerHTML = ''
 
   const buyTicketsButton = document.createElement('a');
@@ -252,18 +252,15 @@ const showResortButtons = (resortButtons) => {
   buyTicketsButton.target = '_blank'
   buyTicketsButton.innerText = 'Buy Lift Tickets'
 
-  // liftStatusButton.setAttribute();
-  // snowReportButton.setAttribute();
+  liftStatusButton.href = resortData[resortButtons].liftStatus;
+  liftStatusButton.target = '_blank'
+  liftStatusButton.innerText = 'Current Lift Status'
+
+  snowReportButton.href = resortData[resortButtons].snowReport;
+  snowReportButton.target = '_blank'
+  snowReportButton.innerText = 'Resort Snow Report'
     
-  resortButtonsDiv.append(buyTicketsButton);
-
-  // create the anchor element with the href attribute
-// const a = document.createElement('a');
-// a.setAttribute('href', '/news_events/');
-
-// append the span element inside the <a>
-// a.appendChild(span);
-// a.innerHTML += 'anchor'; // add extra text for display
+  resortButtonsDiv.append(buyTicketsButton, liftStatusButton, snowReportButton);
 
 }
 
