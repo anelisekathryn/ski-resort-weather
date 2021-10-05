@@ -2,8 +2,8 @@
 var resortData = {
   alta: {
     name: 'Alta',
-    latitude: '40.5884',
-    longitude: '-111.6386',
+    latitude: '40.5834',
+    longitude: '-111.6258',
     office: 'SLC',
     point1: '107',
     point2: '165',
@@ -14,15 +14,15 @@ var resortData = {
     skiRuns: '119',
     baseElev: '8,530 ft',
     summitElev: '11,068 ft',
-    // image: 'INSERT LINK HERE',
+    image: 'https://i.imgur.com/spncR0A.jpg',
     buyTickets: 'https://www.alta.com/tickets-and-passes#lift-tickets',
     liftStatus: 'https://www.alta.com/lift-terrain-status',
     snowReport: 'https://www.alta.com/weather',
   }, 
   brighton: {
     name: 'Brighton',
-    latitude: '40.598',
-    longitude: '-111.5832',
+    latitude: '40.5974',
+    longitude: '-111.5928',
     office: 'SLC',
     point1: '109',
     point2: '166',
@@ -34,15 +34,15 @@ var resortData = {
     skiRuns: '66',
     baseElev: '8,755 ft',
     summitElev: '10,500 ft',
-    // image: 'INSERT LINK HERE',
+    image: 'https://i.imgur.com/wLMxKex.jpg',
     buyTickets: 'https://brightonresort.com/lift-tickets',
     liftStatus: 'https://brightonresort.com/conditions',
     snowReport: 'https://brightonresort.com/conditions',
   },
   deervalley: {
     name: 'Deer Valley',
-    latitude: '40.6374',
-    longitude: '-111.4783',
+    latitude: '40.6285',
+    longitude: '-111.4815',
     office: 'SLC',
     point1: '113',
     point2: '167',
@@ -53,15 +53,15 @@ var resortData = {
     skiRuns: '103',
     baseElev: '6,570 ft',
     summitElev: '9,570 ft',
-    // image: 'INSERT LINK HERE',
+    image: 'https://i.imgur.com/7JgUb1n.jpg',
     buyTickets: 'https://www.deervalley.com/plan-your-trip/tickets-and-passes/lift-tickets',
     liftStatus: 'https://www.deervalley.com/explore-the-mountain/mountain-report#/lifts',
     snowReport: 'https://www.deervalley.com/explore-the-mountain/mountain-report#/',
   },
   parkcity: {
     name: 'Park City Mountain',
-    latitude: '40.6514',
-    longitude: '-111.508',
+    latitude: '40.6346',
+    longitude: '-111.5241',
     office: 'SLC',
     point1: '111',
     point2: '167',
@@ -72,15 +72,15 @@ var resortData = {
     skiRuns: '330',
     baseElev: '6,800 ft',
     summitElev: '10,026 ft',
-    // image: 'INSERT LINK HERE',
+    image: 'https://i.imgur.com/qMqBPij.jpg',
     buyTickets: 'https://www.parkcitymountain.com/plan-your-trip/lift-access/tickets.aspx',
     liftStatus: 'https://www.parkcitymountain.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx',
     snowReport: 'https://www.parkcitymountain.com/the-mountain/mountain-conditions/snow-and-weather-report.aspx',
   },
   snowbird: {
     name: 'Snowbird',
-    latitude: '40.5829',
-    longitude: '-111.6556',
+    latitude: '40.5634',
+    longitude: '-111.6516',
     office: 'SLC',
     point1: '106',
     point2: '164',
@@ -91,15 +91,15 @@ var resortData = {
     skiRuns: '140',
     baseElev: '7,760 ft',
     summitElev: '11,000 ft',
-    // image: 'INSERT LINK HERE',
+    image: 'https://i.imgur.com/rVIqzIO.jpg',
     buyTickets: 'https://shop.snowbird.com/s/winter-tickets/c/winter-lift-ticket',
     liftStatus: 'https://www.snowbird.com/summer-report/',
     snowReport: 'https://www.snowbird.com/summer-report/',
   },
   solitude: {
     name: 'Solitude',
-    latitude: '40.6199',
-    longitude: '-111.5919',
+    latitude: '40.6169',
+    longitude: '-111.6034',
     office: 'SLC',
     point1: '108',
     point2: '167',
@@ -110,7 +110,7 @@ var resortData = {
     skiRuns: '82',
     baseElev: '7,994 ft',
     summitElev: '10,488 ft',
-    // image: 'INSERT LINK HERE',
+    image: 'https://i.imgur.com/FeEEjMC.jpg',
     buyTickets: 'https://www.solitudemountain.com/plan-your-trip/lift-tickets',
     liftStatus: 'https://www.solitudemountain.com/mountain-and-village/conditions-and-maps#/',
     snowReport: 'https://www.solitudemountain.com/mountain-and-village/conditions-and-maps#/',
@@ -130,12 +130,13 @@ weatherButton.addEventListener('click', (ev) => {
   stationid = resortData[resortInput].stationid
 
   const domain = 'https://api.weather.gov';
-  const currentAPIUrl = `${domain}/stations/${stationid}/observations/latest`;
+  // const currentAPIUrl = `${domain}/stations/${stationid}/observations/latest`;
+  const hourlyForecastAPIUrl = `${domain}/gridpoints/${office}/${point1},${point2}/forecast/hourly`
   const forecastAPIUrl = `${domain}/gridpoints/${office}/${point1},${point2}/forecast`;
 
   showResortTitle(resortInput)
 
-  fetch(forecastAPIUrl)
+  fetch(hourlyForecastAPIUrl)
    .then((res) => { return res.json() })
    .then((resJSON) => {
      console.log(resJSON);
@@ -181,18 +182,18 @@ const showResortWeather = (resortWeather) => {
 
 
   const divTitle = document.createElement('h4')
-  const timeTag = document.createElement('p');
   const tempTag = document.createElement('p');
   const windTag = document.createElement('p');
-  const detailForecastTag = document.createElement('p');
+  const conditionsTag = document.createElement('p')
 
-  divTitle.innerText = 'Current Weather'
-  timeTag.innerText = resortWeather.properties.periods[0].name;
+  divTitle.innerText = 'Current Hour Forecast'
+  // timeTag.innerText = resortWeather.properties.periods[0].name;
   tempTag.innerText = ("Temp: " + resortWeather.properties.periods[0].temperature + " F");
   windTag.innerText = ("Wind: " + resortWeather.properties.periods[0].windDirection + " " + resortWeather.properties.periods[0].windSpeed)
-  detailForecastTag.innerText = resortWeather.properties.periods[0].detailedForecast;
+  conditionsTag.innerText = resortWeather.properties.periods[0].shortForecast
 
-  currentWeatherDiv.append(divTitle, tempTag, windTag, detailForecastTag );
+
+  currentWeatherDiv.append(divTitle, tempTag, windTag, conditionsTag);
 
 }
 
@@ -228,6 +229,8 @@ const showResortForecast = (resortForecast) => {
 
 
   const divTitle = document.createElement('h4')
+  const f0NameTag = document.createElement('h5');
+  const f0WeatherTag = document.createElement('p');
   const f1NameTag = document.createElement('h5');
   const f1WeatherTag = document.createElement('p');
   const f2NameTag = document.createElement('h5');
@@ -250,6 +253,8 @@ const showResortForecast = (resortForecast) => {
   const f10WeatherTag = document.createElement('p');
 
   divTitle.innerText = '5 Day Forecast'
+  f0NameTag.innerText = (resortForecast.properties.periods[0].name + ": ")
+  f0WeatherTag.innerText = resortForecast.properties.periods[0].detailedForecast
   f1NameTag.innerText = (resortForecast.properties.periods[1].name + ": ")
   f1WeatherTag.innerText = resortForecast.properties.periods[1].detailedForecast
   f2NameTag.innerText = (resortForecast.properties.periods[2].name + ": ")
@@ -271,6 +276,6 @@ const showResortForecast = (resortForecast) => {
   f10NameTag.innerText = (resortForecast.properties.periods[10].name + ": ")
   f10WeatherTag.innerText = resortForecast.properties.periods[10].detailedForecast
 
-  forecastWeatherDiv.append(divTitle, f1NameTag, f1WeatherTag, f2NameTag, f2WeatherTag, f3NameTag, f3WeatherTag, f4NameTag, f4WeatherTag, f5NameTag, f5WeatherTag, f6NameTag, f6WeatherTag, f7NameTag, f7WeatherTag, f8NameTag, f8WeatherTag, f9NameTag, f9WeatherTag, f10NameTag, f10WeatherTag)
+  forecastWeatherDiv.append(divTitle, f0NameTag, f0WeatherTag, f1NameTag, f1WeatherTag, f2NameTag, f2WeatherTag, f3NameTag, f3WeatherTag, f4NameTag, f4WeatherTag, f5NameTag, f5WeatherTag, f6NameTag, f6WeatherTag, f7NameTag, f7WeatherTag, f8NameTag, f8WeatherTag, f9NameTag, f9WeatherTag, f10NameTag, f10WeatherTag)
 
 }
