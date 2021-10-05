@@ -134,7 +134,9 @@ weatherButton.addEventListener('click', (ev) => {
   const hourlyForecastAPIUrl = `${domain}/gridpoints/${office}/${point1},${point2}/forecast/hourly`
   const forecastAPIUrl = `${domain}/gridpoints/${office}/${point1},${point2}/forecast`;
 
-  showResortTitle(resortInput)
+  showResortImage(resortInput);
+
+  showResortTitle(resortInput);
 
   fetch(hourlyForecastAPIUrl)
    .then((res) => { return res.json() })
@@ -147,6 +149,8 @@ weatherButton.addEventListener('click', (ev) => {
   })
 
   showResortFacts(resortInput)
+
+  showResortButtons(resortInput)
   
   fetch(forecastAPIUrl)
    .then((res) => { return res.json() })
@@ -159,6 +163,19 @@ weatherButton.addEventListener('click', (ev) => {
   })
 
 })
+
+const showResortImage = (resortImage) => {
+
+  const headerImageDiv = document.querySelector('#header-image');
+  headerImageDiv.innerHTML = ''
+
+  const headerImage = document.createElement('img');
+
+  headerImage.src = resortData[resortImage].image
+    
+  headerImageDiv.append(headerImage);
+
+}
 
 const showResortTitle = (resortTitle) => {
 
@@ -219,6 +236,34 @@ const showResortFacts = (resortFacts) => {
   summitElevTag.innerText = ('Summit Elevation: ' + resortData[resortFacts].summitElev);
 
   resortFactsDiv.append(divTitle, averageSnowTag, skiableAcresTag, skiRunsTag, vertDropTag, summitElevTag);
+
+}
+
+const showResortButtons = (resortButtons) => {
+
+  const resortButtonsDiv = document.querySelector('#buttons');
+  resortButtonsDiv.innerHTML = ''
+
+  const buyTicketsButton = document.createElement('a');
+  const liftStatusButton = document.createElement('a');
+  const snowReportButton = document.createElement('a');
+
+  buyTicketsButton.href = resortData[resortButtons].buyTickets;
+  buyTicketsButton.target = '_blank'
+  buyTicketsButton.innerText = 'Buy Lift Tickets'
+
+  // liftStatusButton.setAttribute();
+  // snowReportButton.setAttribute();
+    
+  resortButtonsDiv.append(buyTicketsButton);
+
+  // create the anchor element with the href attribute
+// const a = document.createElement('a');
+// a.setAttribute('href', '/news_events/');
+
+// append the span element inside the <a>
+// a.appendChild(span);
+// a.innerHTML += 'anchor'; // add extra text for display
 
 }
 
