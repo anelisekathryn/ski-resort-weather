@@ -182,7 +182,7 @@ const showResortTitle = (resortTitle) => {
   const resortTitleDiv = document.querySelector('#title');
   resortTitleDiv.innerHTML = ''
 
-  const divTitle = document.createElement('h3');
+  const divTitle = document.createElement('h2');
   const locationTag = document.createElement('h5');
 
   divTitle.innerText = resortData[resortTitle].name;
@@ -223,19 +223,18 @@ const showResortFacts = (resortFacts) => {
 
   const divTitle = document.createElement('h4')
   const averageSnowTag = document.createElement('p');
-  const skiableAcresTag = document.createElement('p');
-  const skiRunsTag = document.createElement('p');
+  const terrainTag = document.createElement('p');
+  // const skiRunsTag = document.createElement('p');
   const vertDropTag = document.createElement('p');
-  const summitElevTag = document.createElement('p');
+  // const summitElevTag = document.createElement('p');
 
-  divTitle.innerText = 'Resort Facts'
+  divTitle.innerText = 'Resort Info'
   averageSnowTag.innerText = ('Average Annual Snowfall: ' + resortData[resortFacts].averageSnow);
-  skiableAcresTag.innerText = ('Skiable Acres: ' + resortData[resortFacts].skiAcres);
-  skiRunsTag.innerText = ('Ski Runs: ' + resortData[resortFacts].skiRuns);
+  terrainTag.innerText = ('Terrain: ' + (resortData[resortFacts].skiAcres) + ' Acres, ' +(resortData[resortFacts].skiRuns) + ' Runs');
   vertDropTag.innerText = ('Vertical Drop: ' + resortData[resortFacts].verticalDrop);
-  summitElevTag.innerText = ('Summit Elevation: ' + resortData[resortFacts].summitElev);
+  // summitElevTag.innerText = ('Summit Elevation: ' + resortData[resortFacts].summitElev);
 
-  resortFactsDiv.append(divTitle, averageSnowTag, skiableAcresTag, skiRunsTag, vertDropTag, summitElevTag);
+  resortFactsDiv.append(divTitle, averageSnowTag, terrainTag, vertDropTag);
 
 }
 

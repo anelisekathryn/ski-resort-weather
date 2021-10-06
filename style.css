@@ -6,25 +6,52 @@ h1 {
   font-size: 50px;
   text-align: center; 
   color: #3a506b;
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center; 
+  color: #3a506b;
 }
 
 h3 {
   font-family: 'Poppins', sans-serif;
   font-weight: 200;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center; 
-  color:
+  margin: auto;
+  max-width: 80%;
+}
+
+h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center; 
+  color: #ffffff;
 }
 
 h5 {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
+  text-align: center;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-size: 14px;
   text-align: center; 
+  color: #ffffff;
 }
 
 #dropdown {
   text-align: center;
+  border-radius: 6px;
 }
 
 #ski-resorts {
@@ -35,30 +62,63 @@ h5 {
 }
 
 #get-weather {
-  background-color: #1c2541;
+  background-color: #5bc0be;
   border: none;
   color: white;
   padding: 5px 10px;
   margin: 5px;
   text-align: center;
   text-decoration: none;
-  /* display: inline-block; */
   font-size: 12px;
   font-family: 'Poppins', sans-serif;
+  border-radius: 6px;
 }
 
 #get-weather:hover {
   background-color: #6fffe9;
 }
 
-#header-image {
-  
+img {
+  margin: auto;
+  display: block;
+  height: auto;
+  max-width: 80%;
+  padding-top: 10px;
+}
+
+/* ++++++++++++ USE MEDIA QUERY HERE???? */
+
+#title {
+  display: inline-block;
+  background-color: #ffffff;
+  max-width: 60%;
+  margin: auto;
+  text-align: center;
+  margin-top: -100px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+#title h2 {
+  margin: 0;
+}
+
+#title h5 {
+  margin-top: 0;
 }
 
 /* BUTTON STYLE ========================== */
 
+#links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 a {
-  background-color: #1c2541;
+  background-color: #5bc0be;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -68,9 +128,52 @@ a {
   display: inline-block;
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
+  border-radius: 6px;
+  min-width: 16%;
 }
 
 a:hover {
   background-color: #6fffe9;
 }  
 
+/* WEATHER & RESORT BOXES ========================== */
+
+#container1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+#current-weather,
+#resort-facts {
+  background-color: #1c2541;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-width: 43%;
+}
+
+#forecast {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #1c2541;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  max-width: 74.1%;
+  border-radius: 20px;
+}
+
+#forecast h5 {
+  margin-top: 20px;
+  margin-bottom: -6px;
+}
