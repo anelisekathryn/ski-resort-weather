@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+    </style>
   <script defer src = "app.js"></script>
   <link rel="stylesheet" href="style.css">
   <title>Ski Resort Weather</title>
@@ -11,14 +14,15 @@
 <body>
 <!-- ============================= -->
   <header>
-    <h1>Ski Resort Weather</h1>  
+    <h1>SKI RESORT WEATHER</h1>  
   </header>
 <!-- ============================= -->
   <main>
-    <h4>Choose a ski resort from the drop down menu below to see current weather, resort facts, the 5 day forecast and more!</h4>
+    <h3>Choose a ski resort from the drop down menu below to see current weather, resort facts, the 5 day forecast and more!</h3>
 
-    <h5>Find a resort:</h5>
+    <h5>Find a resort in the dropdown menu below:</h5>
     <!-- referenced for label code: https://blog.hubspot.com/website/html-dropdown -->
+    <div id="dropdown">
     <select name="ski-resorts" id="ski-resorts">
       <option disabled selected>   </option>
       <option value="alta">Alta</option>
@@ -29,6 +33,7 @@
       <option value="solitude">Solitude</option>
     </select>
     <input id="get-weather" type="Submit" value="Get Weather">
+  </div>
     
     <div id="header-image">
     </div>
@@ -52,7 +57,6 @@
   </main>
 <!-- ============================= -->
   <footer>
-
   </footer>
 <!-- ============================= -->
 
