@@ -86,15 +86,12 @@ img {
   padding-top: 10px;
 }
 
-/* ++++++++++++ USE MEDIA QUERY HERE???? */
-
 #title {
-  display: inline-block;
+  /* display: inline-block; */
   background-color: #ffffff;
   max-width: 60%;
-  margin: auto;
-  text-align: center;
-  margin-top: -100px;
+  margin: 0 auto;
+  /* margin-top: -50px; */
   padding-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
@@ -138,13 +135,24 @@ a:hover {
 
 /* WEATHER & RESORT BOXES ========================== */
 
-#container1 {
+.container1 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 80%;
+}
+
+@media (max-width: 780px) {
+  #container1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    max-width: 80%;
+  }
 }
 
 #current-weather,
@@ -155,7 +163,22 @@ a:hover {
   border-radius: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  min-width: 43%;
+  margin: 10px 0;
+  width: 43%;
+}
+
+@media (max-width: 780px) {
+#current-weather,
+#resort-facts {
+  background-color: #1c2541;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 10px 0;
+  width: 100%;
+}
 }
 
 #forecast {
@@ -167,13 +190,17 @@ a:hover {
   color: #ffffff;
   text-align: center;
   margin: 0 auto;
-  padding-left: 40px;
-  padding-right: 40px;
-  max-width: 74.1%;
+  /* padding-left: 40px;
+  padding-right: 40px; */
+  width: 80%;
   border-radius: 20px;
 }
 
 #forecast h5 {
-  margin-top: 20px;
-  margin-bottom: -6px;
+  margin: 20px 20px -6px 20px;
+}
+
+#forecast p {
+  margin-left: 30px;
+  margin-right: 30px;
 }
