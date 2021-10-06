@@ -5,11 +5,12 @@ https://github.com/anelisekathryn/ski-resort-weather
 This interactive website will display the current weather at a ski resort from a drop down menu! The weather module will also include buttons that direct to external links to the resort's website for lift status and ticket purchase.
 
 ## API & Snippet Example
-https://api.weatherbit.io/v2.0/current
+Documentation: https://www.weather.gov/documentation/services-web-api
 
-Documentation: https://www.weatherbit.io/api/weather-current
+https://api.weather.gov/gridpoints/SLC/107,165/forecast
 
-![Screen Shot 2021-10-01 at 9 59 16 AM](https://user-images.githubusercontent.com/90531123/135651776-14046588-33c8-4db8-b249-2399b82dc5ef.png)
+![Screen Shot 2021-10-06 at 7 19 32 AM](https://user-images.githubusercontent.com/90531123/136210247-97804849-a005-4a90-a430-7964a44eb2d0.png)
+
 
 ## Wireframes
 Mobile wireframe: [linked here](https://www.figma.com/proto/3tV9b8ID3nccd2C3zZgssV/Ski-Resort-Weather?node-id=1%3A2&scaling=scale-down&page-id=0%3A1)
@@ -32,23 +33,26 @@ Desktop wireframe: [linked here](https://www.figma.com/proto/3tV9b8ID3nccd2C3zZg
 ## Project Goals
 | Date           | Deliverable      | Status      |
 | :------------- |:-----------------| :----------:|
-| October 1     | Project Description / Finish Schedule & Timeframe / Complete Wireframe / Connect API | Partial      |
-| October 2–3     | Research Info / Write Pseudocode / HTML Structure | Incomplete      |
-| October 4    | tbd | Incomplete      |
-| October 5    | tbd | Incomplete      |
-| October 6    | tbd | Incomplete      |
-| October 7    | tbd | Incomplete      |
+| October 1     | Project Description / Finish Schedule & Timeframe / Complete Wireframe / Connect API | Complete      |
+| October 2–3     | Research Info / Gather Data | Complete      |
+| October 4    | Write Pseudocode / Create Resort Objects / Create Click Events & Functions / Connect New API | Complete      |
+| October 5    | Work with New API Data / Insert Images / Create Buttons | Complete      |
+| October 6    | CSS Styling / HTML Work | Incomplete      |
+| October 7    | Final CSS Work / Code Clean Up / Post MVP Goals | Incomplete      |
 | October 8    | Final Presentation | Incomplete      |
 
 ## Project Timeframe:
 | Component               | Priority  | Estimated Time  | Actual Time  |
 | :---------------------- |:---------:|:---------------:|:------------:|
-| Description             | H/L       | x hrs           | x hrs        |
-| Description             | H/L       | x hrs           | x hrs        |
-| Description             | H/L       | x hrs           | x hrs        |
-| Description             | H/L       | x hrs           | x hrs        |
-| Description             | H/L       | x hrs           | x hrs        |
-| Description             | H/L       | x hrs           | x hrs        |
-| Description             | H/L       | x hrs           | x hrs        |
-| Description             | H/L       | x hrs           | x hrs        |
+| JS Psuedocode             | H       | 1 hrs           | 1 hrs        |
+| HTML Structure             | H       | 1 hrs           | 1 hrs        |
+| Connect API             | H       | 2 hrs           | 2 hrs        |
+| Gather Data / Create Objects | H       | 4 hrs           | 3 hrs        |
+| JS Structure            | H       | 7 hrs           | 8 hrs        |
+| Event Listener / Functions             | H       | 5 hrs           | x hrs        |
+| Style page w/ CSS             | H       | 6 hrs           | x hrs        |
+| Add flexbox & media query to CSS     | H       | 3 hrs           | x hrs        |
+| Final Tasks / Code Clean Up             | H       | 3 hrs           | x hrs        |
+| MVP Goals             | L       | 7 hrs           | x hrs        |
+| Total            |        | 34 hrs           | x hrs        |
 
