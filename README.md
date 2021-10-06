@@ -53,6 +53,6 @@ Desktop wireframe: [linked here](https://www.figma.com/proto/3tV9b8ID3nccd2C3zZg
 | Style page w/ CSS             | H       | 6 hrs           | x hrs        |
 | Add flexbox & media query to CSS     | H       | 3 hrs           | x hrs        |
 | Final Tasks / Code Clean Up             | H       | 3 hrs           | x hrs        |
-| MVP Goals             | L       | 7 hrs           | x hrs        |
+| Post MVP Goals             | L       | 7 hrs           | x hrs        |
 | Total            |        | 34 hrs           | x hrs        |
 
