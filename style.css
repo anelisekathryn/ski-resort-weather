@@ -1,4 +1,4 @@
-/* HEADER STYLES ========================== */
+/* HEADER STYLES ======================================================== */
 
 h1 {
   font-family: 'Poppins', sans-serif;
@@ -106,7 +106,7 @@ img {
   margin-top: 0;
 }
 
-/* BUTTON STYLE ========================== */
+/* BUTTON STYLING ======================================================== */
 
 #links {
   display: flex;
@@ -133,7 +133,7 @@ a:hover {
   background-color: #6fffe9;
 }  
 
-/* WEATHER & RESORT BOXES ========================== */
+/* WEATHER & RESORT BOXES =============================================== */
 
 .container1 {
   display: flex;

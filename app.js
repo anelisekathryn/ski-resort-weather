@@ -230,7 +230,7 @@ const showResortFacts = (resortFacts) => {
 
   divTitle.innerText = 'Resort Info'
   averageSnowTag.innerText = ('Average Annual Snowfall: ' + resortData[resortFacts].averageSnow);
-  terrainTag.innerText = ('Terrain: ' + (resortData[resortFacts].skiAcres) + ' Acres, ' +(resortData[resortFacts].skiRuns) + ' Runs');
+  terrainTag.innerText = ('Terrain: ' + (resortData[resortFacts].skiAcres) + ' acres, ' +(resortData[resortFacts].skiRuns) + ' runs');
   vertDropTag.innerText = ('Vertical Drop: ' + resortData[resortFacts].verticalDrop);
   // summitElevTag.innerText = ('Summit Elevation: ' + resortData[resortFacts].summitElev);
 
