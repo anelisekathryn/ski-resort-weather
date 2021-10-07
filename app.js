@@ -118,25 +118,29 @@ var resortData = {
 }
 
 const weatherButton = document.querySelector('#get-weather');
+
 weatherButton.addEventListener('click', (ev) => {
   ev.preventDefault();
-
   const resortInput = document.querySelector('#ski-resorts').value
-  console.log(resortInput)
+  showResortImage(resortInput);
+  showResortTitle(resortInput);
+  fetchDataHourly(resortInput);
+  showResortFacts(resortInput)
+  showResortButtons(resortInput)
+  fetchDataForecast(resortInput)
+})
 
-  office = resortData[resortInput].office
-  point1 = resortData[resortInput].point1
-  point2 = resortData[resortInput].point2
-  stationid = resortData[resortInput].stationid
+const fetchDataHourly = (hourly) => {
+
+  office = resortData[hourly].office
+  point1 = resortData[hourly].point1
+  point2 = resortData[hourly].point2
+  stationid = resortData[hourly].stationid
 
   const domain = 'https://api.weather.gov';
   const hourlyForecastAPIUrl = `${domain}/gridpoints/${office}/${point1},${point2}/forecast/hourly`
   const forecastAPIUrl = `${domain}/gridpoints/${office}/${point1},${point2}/forecast`;
-
-  showResortImage(resortInput);
-
-  showResortTitle(resortInput);
-
+  
   fetch(hourlyForecastAPIUrl, {
     headers: {
       'User-Agent': '(www.skiweather.com, anelise.bergin@gmail.com)',
@@ -150,10 +154,17 @@ weatherButton.addEventListener('click', (ev) => {
   .catch((error) => {
     console.log(`ERROR: ${error}`);
   })
+}
 
-  showResortFacts(resortInput)
+const fetchDataForecast = (forecast) => {
+  office = resortData[forecast].office
+  point1 = resortData[forecast].point1
+  point2 = resortData[forecast].point2
+  stationid = resortData[forecast].stationid
 
-  showResortButtons(resortInput)
+  const domain = 'https://api.weather.gov';
+  const hourlyForecastAPIUrl = `${domain}/gridpoints/${office}/${point1},${point2}/forecast/hourly`
+  const forecastAPIUrl = `${domain}/gridpoints/${office}/${point1},${point2}/forecast`;
   
   fetch(forecastAPIUrl, {
     headers: {
@@ -168,10 +179,7 @@ weatherButton.addEventListener('click', (ev) => {
   .catch((error) => {
     console.log(`ERROR: ${error}`);
   })
-
-})
-
-
+}
 
 const showResortImage = (resortImage) => {
 
