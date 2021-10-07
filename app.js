@@ -281,59 +281,73 @@ const showResortButtons = (resortButtons) => {
 }
 
 const showResortForecast = (resortForecast) => {
-
   const forecastWeatherDiv = document.querySelector('#forecast');
   forecastWeatherDiv.innerHTML = ''
 
-
-  const divTitle = document.createElement('h4')
-  const f0NameTag = document.createElement('h5');
-  const f0WeatherTag = document.createElement('p');
-  const f1NameTag = document.createElement('h5');
-  const f1WeatherTag = document.createElement('p');
-  const f2NameTag = document.createElement('h5');
-  const f2WeatherTag = document.createElement('p');
-  const f3NameTag = document.createElement('h5');
-  const f3WeatherTag = document.createElement('p');
-  const f4NameTag = document.createElement('h5');
-  const f4WeatherTag = document.createElement('p');
-  const f5NameTag = document.createElement('h5');
-  const f5WeatherTag = document.createElement('p');
-  const f6NameTag = document.createElement('h5');
-  const f6WeatherTag = document.createElement('p');
-  const f7NameTag = document.createElement('h5');
-  const f7WeatherTag = document.createElement('p');
-  const f8NameTag = document.createElement('h5');
-  const f8WeatherTag = document.createElement('p');
-  const f9NameTag = document.createElement('h5');
-  const f9WeatherTag = document.createElement('p');
-  const f10NameTag = document.createElement('h5');
-  const f10WeatherTag = document.createElement('p');
-
-  divTitle.innerText = '5 Day Forecast'
-  f0NameTag.innerText = (resortForecast.properties.periods[0].name + ": ")
-  f0WeatherTag.innerText = resortForecast.properties.periods[0].detailedForecast
-  f1NameTag.innerText = (resortForecast.properties.periods[1].name + ": ")
-  f1WeatherTag.innerText = resortForecast.properties.periods[1].detailedForecast
-  f2NameTag.innerText = (resortForecast.properties.periods[2].name + ": ")
-  f2WeatherTag.innerText = resortForecast.properties.periods[2].detailedForecast
-  f3NameTag.innerText = (resortForecast.properties.periods[3].name + ": ")
-  f3WeatherTag.innerText = resortForecast.properties.periods[3].detailedForecast
-  f4NameTag.innerText = (resortForecast.properties.periods[4].name + ": ")
-  f4WeatherTag.innerText = resortForecast.properties.periods[4].detailedForecast
-  f5NameTag.innerText = (resortForecast.properties.periods[5].name + ": ")
-  f5WeatherTag.innerText = resortForecast.properties.periods[5].detailedForecast
-  f6NameTag.innerText = (resortForecast.properties.periods[6].name + ": ")
-  f6WeatherTag.innerText = resortForecast.properties.periods[6].detailedForecast
-  f7NameTag.innerText = (resortForecast.properties.periods[7].name + ": ")
-  f7WeatherTag.innerText = resortForecast.properties.periods[7].detailedForecast
-  f8NameTag.innerText = (resortForecast.properties.periods[8].name + ": ")
-  f8WeatherTag.innerText = resortForecast.properties.periods[8].detailedForecast
-  f9NameTag.innerText = (resortForecast.properties.periods[9].name + ": ")
-  f9WeatherTag.innerText = resortForecast.properties.periods[9].detailedForecast
-  f10NameTag.innerText = (resortForecast.properties.periods[10].name + ": ")
-  f10WeatherTag.innerText = resortForecast.properties.periods[10].detailedForecast
-
-  forecastWeatherDiv.append(divTitle, f0NameTag, f0WeatherTag, f1NameTag, f1WeatherTag, f2NameTag, f2WeatherTag, f3NameTag, f3WeatherTag, f4NameTag, f4WeatherTag, f5NameTag, f5WeatherTag, f6NameTag, f6WeatherTag, f7NameTag, f7WeatherTag, f8NameTag, f8WeatherTag, f9NameTag, f9WeatherTag, f10NameTag, f10WeatherTag)
-
+  for (let i = 0; i < 11; i++) {
+    const forecastName = document.createElement('h5')
+    const forecastWeather = document.createElement('p')
+    forecastName.innerText = resortForecast.properties.periods[i].name
+    forecastWeatherDiv.appendChild(forecastName)
+    forecastWeather.innerText = resortForecast.properties.periods[i].detailedForecast
+    forecastWeatherDiv.appendChild(forecastWeather)
+  }
 }
+
+// const showResortForecast = (resortForecast) => {
+
+//   const forecastWeatherDiv = document.querySelector('#forecast');
+//   forecastWeatherDiv.innerHTML = ''
+
+
+//   const divTitle = document.createElement('h4')
+//   const f0NameTag = document.createElement('h5');
+//   const f0WeatherTag = document.createElement('p');
+//   const f1NameTag = document.createElement('h5');
+//   const f1WeatherTag = document.createElement('p');
+//   const f2NameTag = document.createElement('h5');
+//   const f2WeatherTag = document.createElement('p');
+//   const f3NameTag = document.createElement('h5');
+//   const f3WeatherTag = document.createElement('p');
+//   const f4NameTag = document.createElement('h5');
+//   const f4WeatherTag = document.createElement('p');
+//   const f5NameTag = document.createElement('h5');
+//   const f5WeatherTag = document.createElement('p');
+//   const f6NameTag = document.createElement('h5');
+//   const f6WeatherTag = document.createElement('p');
+//   const f7NameTag = document.createElement('h5');
+//   const f7WeatherTag = document.createElement('p');
+//   const f8NameTag = document.createElement('h5');
+//   const f8WeatherTag = document.createElement('p');
+//   const f9NameTag = document.createElement('h5');
+//   const f9WeatherTag = document.createElement('p');
+//   const f10NameTag = document.createElement('h5');
+//   const f10WeatherTag = document.createElement('p');
+
+//   divTitle.innerText = '5 Day Forecast'
+//   f0NameTag.innerText = (resortForecast.properties.periods[0].name + ": ")
+//   f0WeatherTag.innerText = resortForecast.properties.periods[0].detailedForecast
+//   f1NameTag.innerText = (resortForecast.properties.periods[1].name + ": ")
+//   f1WeatherTag.innerText = resortForecast.properties.periods[1].detailedForecast
+//   f2NameTag.innerText = (resortForecast.properties.periods[2].name + ": ")
+//   f2WeatherTag.innerText = resortForecast.properties.periods[2].detailedForecast
+//   f3NameTag.innerText = (resortForecast.properties.periods[3].name + ": ")
+//   f3WeatherTag.innerText = resortForecast.properties.periods[3].detailedForecast
+//   f4NameTag.innerText = (resortForecast.properties.periods[4].name + ": ")
+//   f4WeatherTag.innerText = resortForecast.properties.periods[4].detailedForecast
+//   f5NameTag.innerText = (resortForecast.properties.periods[5].name + ": ")
+//   f5WeatherTag.innerText = resortForecast.properties.periods[5].detailedForecast
+//   f6NameTag.innerText = (resortForecast.properties.periods[6].name + ": ")
+//   f6WeatherTag.innerText = resortForecast.properties.periods[6].detailedForecast
+//   f7NameTag.innerText = (resortForecast.properties.periods[7].name + ": ")
+//   f7WeatherTag.innerText = resortForecast.properties.periods[7].detailedForecast
+//   f8NameTag.innerText = (resortForecast.properties.periods[8].name + ": ")
+//   f8WeatherTag.innerText = resortForecast.properties.periods[8].detailedForecast
+//   f9NameTag.innerText = (resortForecast.properties.periods[9].name + ": ")
+//   f9WeatherTag.innerText = resortForecast.properties.periods[9].detailedForecast
+//   f10NameTag.innerText = (resortForecast.properties.periods[10].name + ": ")
+//   f10WeatherTag.innerText = resortForecast.properties.periods[10].detailedForecast
+
+//   forecastWeatherDiv.append(divTitle, f0NameTag, f0WeatherTag, f1NameTag, f1WeatherTag, f2NameTag, f2WeatherTag, f3NameTag, f3WeatherTag, f4NameTag, f4WeatherTag, f5NameTag, f5WeatherTag, f6NameTag, f6WeatherTag, f7NameTag, f7WeatherTag, f8NameTag, f8WeatherTag, f9NameTag, f9WeatherTag, f10NameTag, f10WeatherTag)
+
+// }
