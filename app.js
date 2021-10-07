@@ -2,10 +2,10 @@
 var resortData = {
   alta: {
     name: 'Alta',
-    latitude: '40.5834',
-    longitude: '-111.6258',
+    latitude: '40.5782',
+    longitude: '-111.6173',
     office: 'SLC',
-    point1: '107',
+    point1: '108',
     point2: '165',
     location: 'Little Cottonwood Canyon, Utah',
     averageSnow: '547"',

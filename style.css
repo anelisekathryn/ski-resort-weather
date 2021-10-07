@@ -5,7 +5,7 @@ h1 {
   font-weight: 500;
   font-size: 50px;
   text-align: center; 
-  color: #3a506b;
+  color: #0b132b;
   line-height: 1.2;
 }
 
@@ -245,7 +245,8 @@ img {
 .footer {
   background-color: #0b132b;
   color: #ffffff;
-  padding: 5px 0 10px 30px;
+  padding: 10px 10px 10px 30px;
+  margin: 300px 0 0 0;
 }
 
 h6 {
@@ -253,11 +254,13 @@ h6 {
   font-weight: 400;
   font-size: 12px;
   text-align: left;
+  margin: 4px;
 }
 
 .footer p {
   text-align: left;
   font-size: 12px;
+  margin: 4px;
 }
 
 .footer a {
