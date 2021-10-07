@@ -1,12 +1,5 @@
 /* HEADER STYLES ======================================================== */
 
-/* body {
-  background-image: url('https://i.imgur.com/BXfGIx7.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-size: 100%;
-} */
-
 h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
@@ -249,15 +242,17 @@ img {
 
 /* FOOTER ============================================================== */
 
-.footer {
-  display: block;
+#footer {
   background-color: #0b132b;
   color: #ffffff;
-  padding: 10px 10px 10px 30px;
   margin: 300px 0 0 0;
 }
 
-h6 {
+#footer-text {
+  padding: 10px 10px 10px 30px;
+}
+
+#footer-text h6 {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -265,18 +260,18 @@ h6 {
   margin: 4px;
 }
 
-.footer p {
+#footer-text p {
   text-align: left;
   font-size: 12px;
   margin: 4px;
 }
 
-.footer a {
+#footer-text a {
   text-decoration: none;
   color: #ffffff;
   font-weight: 300;
 }
 
-.footer a:hover {
+#footer-text a:hover {
   color: #6fffe9;
 }

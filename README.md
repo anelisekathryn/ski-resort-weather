@@ -29,6 +29,7 @@ Desktop wireframe: [linked here](https://www.figma.com/proto/3tV9b8ID3nccd2C3zZg
 - choose additional weather parameters from a dropdown to add to your report
 - add additional ski resorts throughout the mountain west (10+)
 - add animated snowflake while user waits for weather to load
+- add footer that appears after data is shown
 
 ## Project Goals
 | Date           | Deliverable      | Status      |
