@@ -37,7 +37,7 @@ Desktop wireframe: [linked here](https://www.figma.com/proto/3tV9b8ID3nccd2C3zZg
 | October 2–3     | Research Info / Gather Data | Complete      |
 | October 4    | Write Pseudocode / Create Resort Objects / Create Click Events & Functions / Connect New API | Complete      |
 | October 5    | Work with New API Data / Insert Images / Create Buttons | Complete      |
-| October 6    | CSS Styling / HTML Work | Incomplete      |
+| October 6    | CSS Styling / HTML Work | Complete      |
 | October 7    | Final CSS Work / Code Clean Up / Post MVP Goals | Incomplete      |
 | October 8    | Final Presentation | Incomplete      |
 
@@ -48,11 +48,11 @@ Desktop wireframe: [linked here](https://www.figma.com/proto/3tV9b8ID3nccd2C3zZg
 | HTML Structure             | H       | 1 hrs           | 1 hrs        |
 | Connect API             | H       | 2 hrs           | 2 hrs        |
 | Gather Data / Create Objects | H       | 4 hrs           | 3 hrs        |
-| JS Structure            | H       | 7 hrs           | 8 hrs        |
-| Event Listener / Functions             | H       | 5 hrs           | x hrs        |
+| JS Structure            | H       | 4 hrs           | 4 hrs        |
+| Event Listener / Functions             | H       | 6 hrs           | x hrs        |
 | Style page w/ CSS             | H       | 6 hrs           | x hrs        |
 | Add flexbox & media query to CSS     | H       | 3 hrs           | x hrs        |
 | Final Tasks / Code Clean Up             | H       | 3 hrs           | x hrs        |
 | Post MVP Goals             | L       | 7 hrs           | x hrs        |
-| Total            |        | 34 hrs           | x hrs        |
+| Total            |        | x hrs           | x hrs        |
 
