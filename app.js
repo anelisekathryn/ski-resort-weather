@@ -289,6 +289,7 @@ const showFooter = () => {
 
   const footerDiv = document.querySelector('#footer').children[0]
   footerDiv.id = 'footer-text'
+  footerDiv.innerHTML = ''
 
   const footerLine1 = document.createElement('h6');
   const footerLine2 = document.createElement('p');

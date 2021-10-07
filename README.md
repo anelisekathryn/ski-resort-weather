@@ -34,26 +34,26 @@ Desktop wireframe: [linked here](https://www.figma.com/proto/3tV9b8ID3nccd2C3zZg
 ## Project Goals
 | Date           | Deliverable      | Status      |
 | :------------- |:-----------------| :----------:|
-| October 1     | Project Description / Finish Schedule & Timeframe / Complete Wireframe / Connect API | Complete      |
-| October 2–3     | Research Info / Gather Data | Complete      |
+| October 1     | Project Description / Finish Schedule & Timeframe / Complete Wireframe / Connect API     | Complete      |
+| October 3     | Research Info / Gather Data | Complete      |
 | October 4    | Write Pseudocode / Create Resort Objects / Create Click Events & Functions / Connect New API | Complete      |
 | October 5    | Work with New API Data / Insert Images / Create Buttons | Complete      |
 | October 6    | CSS Styling / HTML Work | Complete      |
-| October 7    | Final CSS Work / Code Clean Up / Post MVP Goals | Incomplete      |
-| October 8    | Final Presentation | Incomplete      |
+| October 7    | Final CSS Work / Code Clean Up / Post MVP Goals | Complete      |
+| October 8    | Final Presentation | Scheduled 10/8      |
 
 ## Project Timeframe:
-| Component               | Priority  | Estimated Time  | Actual Time  |
-| :---------------------- |:---------:|:---------------:|:------------:|
-| JS Psuedocode             | H       | 1 hrs           | 1 hrs        |
-| HTML Structure             | H       | 1 hrs           | 1 hrs        |
-| Connect API             | H       | 2 hrs           | 2 hrs        |
-| Gather Data / Create Objects | H       | 4 hrs           | 3 hrs        |
-| JS Structure            | H       | 4 hrs           | 4 hrs        |
-| Event Listener / Functions             | H       | 6 hrs           | x hrs        |
-| Style page w/ CSS             | H       | 6 hrs           | x hrs        |
-| Add flexbox & media query to CSS     | H       | 3 hrs           | x hrs        |
-| Final Tasks / Code Clean Up             | H       | 3 hrs           | x hrs        |
-| Post MVP Goals             | L       | 7 hrs           | x hrs        |
-| Total            |        | x hrs           | x hrs        |
+| Component                        | Priority  | Estimated Time  | Actual Time  |
+| :------------------------------- |:---------:|:---------------:|:------------:|
+| JS Psuedocode                    | H         | 1 hrs           | 1 hrs        |
+| HTML Structure                   | H         | 1 hrs           | 1 hrs        |
+| Connect API                      | H         | 2 hrs           | 2 hrs        |
+| Gather Data / Create Objects     | H         | 4 hrs           | 3 hrs        |
+| JS Structure                     | H         | 4 hrs           | 4 hrs        |
+| Event Listener / Functions       | H         | 6 hrs           | 8 hrs        |
+| Style page w/ CSS                | H         | 6 hrs           | 8 hrs        |
+| Add flexbox & media query to CSS | H         | 3 hrs           | 3 hrs        |
+| Final Tasks / Code Clean Up      | H         | 3 hrs           | 5 hrs        |
+| Post MVP Goals                   | L         | 7 hrs           | 6 hrs        |
+| Total                            |           | 37 hrs          | 41 hrs       |
 
