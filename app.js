@@ -130,7 +130,6 @@ weatherButton.addEventListener('click', (ev) => {
   stationid = resortData[resortInput].stationid
 
   const domain = 'https://api.weather.gov';
-  // const currentAPIUrl = `${domain}/stations/${stationid}/observations/latest`;
   const hourlyForecastAPIUrl = `${domain}/gridpoints/${office}/${point1},${point2}/forecast/hourly`
   const forecastAPIUrl = `${domain}/gridpoints/${office}/${point1},${point2}/forecast`;
 
@@ -138,7 +137,11 @@ weatherButton.addEventListener('click', (ev) => {
 
   showResortTitle(resortInput);
 
-  fetch(hourlyForecastAPIUrl)
+  fetch(hourlyForecastAPIUrl, {
+    headers: {
+      'User-Agent': '(www.skiweather.com, anelise.bergin@gmail.com)',
+    }
+  })
    .then((res) => { return res.json() })
    .then((resJSON) => {
      console.log(resJSON);
@@ -152,7 +155,11 @@ weatherButton.addEventListener('click', (ev) => {
 
   showResortButtons(resortInput)
   
-  fetch(forecastAPIUrl)
+  fetch(forecastAPIUrl, {
+    headers: {
+      'User-Agent': '(www.skiweather.com, anelise.bergin@gmail.com)',
+    }
+  })
    .then((res) => { return res.json() })
    .then((resJSON) => {
      console.log(resJSON);
@@ -163,6 +170,8 @@ weatherButton.addEventListener('click', (ev) => {
   })
 
 })
+
+
 
 const showResortImage = (resortImage) => {
 
