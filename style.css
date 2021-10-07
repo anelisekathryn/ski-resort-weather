@@ -1,4 +1,11 @@
 /* HEADER STYLES ======================================================== */
+body {
+  background-image: url('https://i.imgur.com/BXfGIx7.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100%;
+}
+
 
 h1 {
   font-family: 'Poppins', sans-serif;
@@ -88,7 +95,7 @@ img {
 
 #title {
   /* display: inline-block; */
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   max-width: 60%;
   margin: 0 auto;
   /* margin-top: -50px; */
@@ -243,6 +250,7 @@ img {
 /* FOOTER ============================================================== */
 
 .footer {
+  display: block;
   background-color: #0b132b;
   color: #ffffff;
   padding: 10px 10px 10px 30px;
