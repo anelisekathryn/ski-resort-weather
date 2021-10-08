@@ -26,7 +26,7 @@ Desktop wireframe: [linked here](https://www.figma.com/proto/3tV9b8ID3nccd2C3zZg
 - add a breakpoint/media query to implement responsive design for mobile and desktop
 
 ## Post MVP Features List
-- choose additional weather parameters from a dropdown to add to your report
+- choose additional weather parameters from a dropdown to add to your report (5 day forecast)
 - add additional ski resorts throughout the mountain west (10+)
 - add animated snowflake while user waits for weather to load
 - add footer that appears after data is shown
