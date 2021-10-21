@@ -1,6 +1,7 @@
 # Ski Resort Weather
 
 https://github.com/anelisekathryn/ski-resort-weather
+https://anelisekathryn.github.io/ski-resort-weather/
 
 This interactive website will display the current weather at a ski resort from a drop down menu! The weather module will also include buttons that direct to external links to the resort's website for lift status and ticket purchase.
 
